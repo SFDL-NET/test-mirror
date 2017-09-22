@@ -1,0 +1,4 @@
+Publish at Github:
+  stage: mirror
+  script:
+    - git push --mirror https://${GIT_USERNAME}:${GIT_PASSWORD}/SFDL-NET/test-mirror.git
