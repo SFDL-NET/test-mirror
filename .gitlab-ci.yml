@@ -1,4 +1,6 @@
 Publish at Github:
   stage: deploy
   script:
-    - git push --mirror https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SFDL-NET/test-mirror.git
+  - ls -la
+  - git status
+  - git push --mirror https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SFDL-NET/test-mirror.git
