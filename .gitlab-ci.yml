@@ -3,6 +3,7 @@ Publish at Github:
   script:
   - mkdir git_mirror && cd git_mirror
   - git clone -q --mirror "${CI_REPOSITORY_URL}"
+  - cd "${CI_PROJECT_NAME}.git"
   - git status
   - git push --mirror https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SFDL-NET/test-mirror.git
   - cd .. && rm -R git_mirror
