@@ -1,6 +1,8 @@
 Publish at Github:
   stage: deploy
   script:
-  - ls -la
+  - mkdir git_mirror && cd git_mirror
+  - git clone -q --mirror "${CI_REPOSITORY_URL}"
   - git status
   - git push --mirror https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/SFDL-NET/test-mirror.git
+  - cd .. && rm -R git_mirror
